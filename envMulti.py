@@ -102,10 +102,15 @@ class QuantumToyEnv(ClassicToyEnv):
         super().__init__(MaxSteps)
     
         # ========================================
+        # Avere più qubit in ciascuna di queste categorie permette una rappresentazione più dettagliata e potenzialmente una maggiore capacità 
+        #di apprendimento e di decisione.
         # Quantum MDP representation 
-        self.nqS= 2 # Number of qubits for state representation= log2(nS)
-        self.nqA= 1 # Number of qubits required for action representation= log2(nA)
-        self.nqR= 2 # Number of qubits for reward representation= log2(nR)
+        self.nqS= 2 
+        #si può modificare a 3 ==> self.nqS= 3
+        self.nqA= 1 
+        #si può modificare e 2==> self.nqA= 2
+        self.nqR= 2 
+        #si può modificare a 3 ==> self.nqR= 3
 
 
         # Quantum Registers    
