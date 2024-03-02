@@ -87,7 +87,9 @@ def ExtractPolicyFromVTable(env, Vtable, gamma):
         policy[s]= np.argmax(Qtable)
     return policy#politica ottimale per ogni sato ci dice quale azione intraprendere per massimizzare la  ricompensa 
 #massiam futura 
-
+#MODIFICA DELLA POLITCA GREEDY
+#ORIGINALE
+'''
 def eGreedyPolicy(env, S, AgentPolicy, Q, epsilon):
     
     if np.random.rand() < epsilon: # Random uniform policy
@@ -95,10 +97,27 @@ def eGreedyPolicy(env, S, AgentPolicy, Q, epsilon):
     
     else:
         return AgentPolicy(env, S, Q) 
-        
-        
+               
+'''
+#*MODIFICA CODICE PER PROGETTO:
+    #*In questo codice epsilon_decay è un parametro che riduce epsilon ad ogni chiamata della funzione
+    #*tie_break è un altro nuovo parametro che determina come gestire i casi in cui ci sono più azioni 
+    #*con lo stesso valore Q massimo.
+def eGreedyPolicy(env, S, AgentPolicy, Q, epsilon, epsilon_decay=0.99, tie_break="random"):
+    # Decay epsilon
+    epsilon *= epsilon_decay
 
-    
+    if np.random.rand() < epsilon: # Random policy
+        if tie_break == "random":
+            return np.random.randint(low=0, high=env.numberOfActions())
+        elif tie_break == "first":
+            # Choose the first action with the maximum Q value
+            return np.argmax(Q[S])
+        else:
+            raise ValueError("Invalid tie_break value: {}".format(tie_break))
+    else:
+        return AgentPolicy(env, S, Q)
+     
 def AgentPolicy(env, S, Q):
     return np.argmax([Q[(S, a)] for a in range(env.numberOfActions())]) 
 
