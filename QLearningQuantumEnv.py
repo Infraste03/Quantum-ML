@@ -1,12 +1,11 @@
-from env2 import QuantumToyEnv
-from algo2 import DQLearning, runEnvironment
 import time
 import numpy as np
 import matplotlib.pyplot as plt
 
 #* in questo file posso importare algo2 nel caso in cui voglia testare il codice della funzione DQLearning 
 #* e env2 nel caso in cui voglia testare il codice con le modifiche per Us, Ua, Ut e Ur
-
+from env2 import QuantumToyEnv
+from algo2 import DQLearning, runEnvironment
 # Instantiate environment
 env= QuantumToyEnv()
 #display(env.qc.draw('mpl'))
