@@ -184,8 +184,7 @@ class QuantumToyEnv(ClassicToyEnv):
         qc.barrier()
         
 
-    #& modificare quesat è un attimo + difficile perchè alla fine dovrei andare a modificare una funnzione
-    #& ricorsiva che genra un quantum circuit per il sampling del next state 
+     
     def __Ut(self, qc, qS, qA, qSp):
     
         for s in range(self.nS): 
