@@ -32,8 +32,7 @@ with open('qlearning_model0202.pkl', 'wb') as f:
     pickle.dump(policy, f)
 tf= time.time()
 
-#####
-print ("POLITICHEE")
+print ("POLITICHE")
 plt.plot(rewards)
 plt.xlabel('Step')
 plt.ylabel('Reward')
@@ -50,8 +49,8 @@ for s in range(len(policy)):
     
 
 # Execute policy
-MaxIterations= 2 # Number of iterations for test
-MaxTests= 3
+MaxIterations= 200 # Number of iterations for test
+MaxTests= 100
 RewardSet= []
 weights= []
 for test in range(MaxTests):
