@@ -6,7 +6,7 @@ import time
 #^ INTRODUCO UN FATTORE DI ESPLORAZIONE VARIABILE  PER IL Q-LEARNING
 #* invece di utilizzare un fattore epsilon fisso per la politica e-greedy, introduco un fattore che
 #*diminuisce nel tempo. Questo lo faccio perchè permetterebbe all agente di esplorare l' ambiente 
-#*inizialemnte e, mano man che acquista esperienza, di sfruttare le informazioni acquisite per massimizzare la rimcpensa  
+#*inizialemnte e, mano man che acquista esperienza, di sfruttare le informazioni acquisite per massimizzare la ricompensa  
 
 
 def runEnvironment(env, policy, weights, MaxIterations, showIter=False):
