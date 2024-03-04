@@ -1,6 +1,9 @@
 Il progetto si compone di tre directory, ognuna delle quali contiene rispettivamente:
+
 -eGreedyPolicy e DQLearning;
+
 -sviluppo caso multi agente;
+
 -Stati parzialmente osservabili;
 
 Lo sviluppo del codice si basa sulla seguente source:
