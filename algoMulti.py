@@ -24,7 +24,13 @@ def runEnvironment(env, policies, iterations, showIter=False):
     R = [0 for _ in policies]  # R is now a list of rewards for each agent
     t0 = time.time()
     for it in range(iterations):
-        a = [int(policy[state]) for state, policy in zip(s, policies)]
+        a = []
+        for state, policy in zip(s, policies):
+            try:
+                a.append(int(policy[state]))
+            except IndexError:
+                print(f"Invalid state {state} for policy with {len(policy)} states")
+                a.append(0)  # or some other default action
         
         # If a has more than 4 actions, truncate it
         if len(a) > 4:
