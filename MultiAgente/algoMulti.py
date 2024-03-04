@@ -4,6 +4,7 @@ import time
 from qiskit import QuantumRegister, QuantumCircuit
 
 
+
 def runEnvironment(env, policies, iterations, showIter=False):
     num_agents = 4
     s = env.reset()
