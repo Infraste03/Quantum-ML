@@ -6,6 +6,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 
+
 #*MODIFICA CODICE PER IL PROGETTO:
  #*in questo caso è stato modificata la funzione DQLearning, seguendo i seguenti criteri:
  #* 1) Modularità: La funzione create_model è separata dalla funzione DQLearning,
