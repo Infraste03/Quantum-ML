@@ -186,9 +186,9 @@ def QLearning(env, MaxSteps, eps0, epsf, epsSteps, alpha, gamma, show=False):
         # Ensure r is a float before using it in the expression
         
         r = r[0]
-        #print ("ciaoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", r)
+        #print ("r", r)
 
-        # Now you can use r in your expression
+        
         Q[(s, a1)] += alpha * (r + gamma * Q[(sp, ap)] - Q[(s, a1)])
         Q[(s, a2)] += alpha * (r + gamma * Q[(sp, ap)] - Q[(s, a2)])
         Q[(s, a3)] += alpha * (r + gamma * Q[(sp, ap)] - Q[(s, a3)])
