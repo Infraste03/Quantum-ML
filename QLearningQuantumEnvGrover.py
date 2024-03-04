@@ -25,7 +25,7 @@ env= QuantumToyEnv()
 
 # Q-Learning Algorithm hyperparameters
 gamma= 0.99 # Discount factor
-MaxSteps= 2 # Maximum number of iterations
+MaxSteps= 200 # Maximum number of iterations
 eps0= 0.5 # Initial epsilon value for e-greedy policy
 epsf= 0.001 # Final epsilon value for e-greedy policy
 epsSteps= MaxSteps # Number of steps to decrease e-greedy epsilon from eps0 to epsf
