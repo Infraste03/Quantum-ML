@@ -27,7 +27,7 @@ t0= time.time()
 state_size = env.nS
 print("env" , env.nS)
 action_size = env.nqA
-print ('action_sizeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' , action_size)
+
 #exit(0)
 policy, Niter= DQLearning(env, state_size, action_size, MaxSteps, eps0, epsf, epsSteps, alpha, gamma, show)
 tf= time.time()
