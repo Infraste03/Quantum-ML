@@ -73,7 +73,7 @@ class ClassicToyEnv:
     # Executes an action "action" over the environment
     # Returns the next state sp observation and reward r as  (sp, r)
     # Returns (None, None) if the Maximum number of steps criterion is True
-    #* modifica 16/02 
+    
     #* introduzione degli stati parzialmente osservabili 
     def step(self, action):
         # First: Check if the stopping criterion is True
