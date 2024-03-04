@@ -56,7 +56,7 @@ weights= []
 for test in range(MaxTests):
     print('Test environment #{}/{}'.format(test+1, MaxTests))
     R, t_total= runEnvironment(env, policy,weights, MaxIterations, showIter=False)
-    #TypeError: runEnvironment() missing 1 required positional argument: 'iterations'
+    
     RewardSet.append(R)
     
 
