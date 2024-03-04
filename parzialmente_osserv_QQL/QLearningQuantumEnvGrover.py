@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri May  5 14:29:39 2023
-
-@author: manupc
-
-This file contains an example of classic Q-Learning to calculate
-the optimal deterministic policy of the agent in the toy environment of the article,
-using the MDP implemented as a quantum circuit
-"""
 from environments import QuantumToyEnv
 from algorithms import QuantumQLearning, runEnvironment
 import time
