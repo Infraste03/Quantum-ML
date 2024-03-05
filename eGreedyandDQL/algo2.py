@@ -12,7 +12,7 @@ from keras.optimizers import Adam
  #* 1) Modularità: La funzione create_model è separata dalla funzione DQLearning,
  #*2) Uso di Deep Learning: permette di gestire spazi di stato e azione molto grandi che non potrebbero essere gestiti con metodi tabulari.
  #*3) Politica Epsilon-Greedy & Decadimento di Epsilon
- #*4) Aggiornamento online: aggiornando il tuo modello ad ogni passo, il che può aiutare l'agente ad adattarsi rapidamente a nuove informazion
+ #*4) Aggiornamento online: aggiornando il modello ad ogni passo, il che può aiutare l'agente ad adattarsi rapidamente a nuove informazion
  #*5) Uso di un criterio di arresto: Il  codice controlla se un criterio di arresto è soddisfatto e resetta l'ambiente 
  #*se necessario. Questo è utile per problemi in cui l'agente deve ripetere un compito molte volte
  #*6) Controllo del numero massimo di passaggi: Il  codice termina dopo un numero massimo di passaggi, il che è utile per evitare loop infiniti.
